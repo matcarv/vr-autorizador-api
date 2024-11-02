@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /autorizador/v1
+  
+spring:
+  application:
+    name: autorizador
+  jpa:
+    database: MYSQL
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/miniautorizador
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: vrautorizador
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER    
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
