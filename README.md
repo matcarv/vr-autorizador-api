@@ -49,3 +49,5 @@ Após a execução do projeto, acesse o link **http://yourhost:8080/autorizador/
 Será solicitado as credenciais de acesso (HTTP Basic), sendo estas:
  * Username: admin
  * Password: vr@123**
+
+**OBS:** Troque o termo <i>yourhost</i> da URL pelo IP/hostame da máquina que está rodando a aplicação. 
