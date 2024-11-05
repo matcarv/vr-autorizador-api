@@ -27,7 +27,7 @@ mvn clean test
 A cobertura de Código foi fechada com **93%**, conforme imagem abaixo:
 
 ![Jacoco Maven Plugin](jacoco.png?raw=true "Jacoco Maven Plugin")
-**target/site/jacoco/jacoco.index.html**
+**target/site/jacoco/jacoco.html**
 
 ### Executando a Aplicação
 
@@ -36,7 +36,7 @@ Acesse a raiz do projeto e rode o seguintes comandos:
 docker compose build
 docker compose up -d
 ````
-### Chamado os serviços
+### Chamando os serviços
 
 **1 - Via Insomnia**
 
