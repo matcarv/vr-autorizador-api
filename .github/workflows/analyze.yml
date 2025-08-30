@@ -7,7 +7,7 @@ on:
     - cron: '0 0 * * 0' # Executa semanalmente
 
 jobs:
-  analyze-codeql:
+  analyze:
     runs-on: ubuntu-latest
 
     permissions:
@@ -37,7 +37,6 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
-        config-file: .github/codeql/codeql-config.yml
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
