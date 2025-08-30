@@ -54,8 +54,7 @@ Será solicitado as credenciais de acesso (HTTP Basic), sendo estas:
 
 **Dados do Sonar**
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=matcarv_vr-autorizador-api&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=matcarv_vr-autorizador-api)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=matcarv_vr-autorizador-api&metric=coverage)](https://sonarcloud.io/summary/new_code?id=matcarv_vr-autorizador-api)
+[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-highlight.svg)](https://sonarcloud.io/summary/new_code?id=matcarv_vr-autorizador-api)
 
 Veja o dashboard completo do SonarCloud:  
 https://sonarcloud.io/project/overview?id=matcarv_vr-autorizador-api
