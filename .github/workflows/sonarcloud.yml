@@ -1,10 +1,12 @@
 name: SonarCloud
 
 on:
-  workflow_run:
-    workflows: ["CodeQL"]
-    types:
-      - completed
+  push:
+    branches: [ "main" ]
+  #workflow_run:
+  #  workflows: ["CodeQL"]
+  #  types:
+  #    - completed
 
 jobs:
   analyze:
