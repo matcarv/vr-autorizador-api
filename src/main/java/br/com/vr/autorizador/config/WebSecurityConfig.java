@@ -48,39 +48,39 @@ public class WebSecurityConfig {
 	 */
 	@Bean
     protected SecurityFilterChain filterChain(final HttpSecurity http) throws Exception {
-		http
-		    .csrf(csrf -> csrf.ignoringRequestMatchers(
-		        AntPathRequestMatcher.antMatcher("/"),
-		        AntPathRequestMatcher.antMatcher("/docs"),
-		        AntPathRequestMatcher.antMatcher("/v2/api-docs/**"),
-		        AntPathRequestMatcher.antMatcher("/webjars/**"),
-		        AntPathRequestMatcher.antMatcher("/swagger-resources/**"),
-		        AntPathRequestMatcher.antMatcher("/configuration/**"),
-		        AntPathRequestMatcher.antMatcher("/swagger-ui/**"),
-		        AntPathRequestMatcher.antMatcher("/*.html"),
-		        AntPathRequestMatcher.antMatcher("/favicon.ico"),
-		        AntPathRequestMatcher.antMatcher("/**/*.html"),
-		        AntPathRequestMatcher.antMatcher("/**/*.css"),
-		        AntPathRequestMatcher.antMatcher("/**/*.js")
-		    ))
-		    .authorizeHttpRequests(auth -> auth
-		        .requestMatchers(
-		            "/v2/api-docs/**", 
-		            "/swagger-ui/**", 
-		            "/swagger-resources/**", 
-		            "/webjars/**", 
-		            "/configuration/**",
-		            "/", 
-		            "/*.html", 
-		            "/favicon.ico", 
-		            "/**/*.html", 
-		            "/**/*.css", 
-		            "/**/*.js",
-		            "/docs"
-		        ).permitAll()
-		        .anyRequest().authenticated()
-		    )
-		    .httpBasic(Customizer.withDefaults());
+        http
+                .csrf(csrf -> csrf.ignoringRequestMatchers(
+                        AntPathRequestMatcher.antMatcher("/"),
+                        AntPathRequestMatcher.antMatcher("/docs"),
+                        AntPathRequestMatcher.antMatcher("/v2/api-docs/**"),
+                        AntPathRequestMatcher.antMatcher("/webjars/**"),
+                        AntPathRequestMatcher.antMatcher("/swagger-resources/**"),
+                        AntPathRequestMatcher.antMatcher("/configuration/**"),
+                        AntPathRequestMatcher.antMatcher("/swagger-ui/**"),
+                        AntPathRequestMatcher.antMatcher("/*.html"),
+                        AntPathRequestMatcher.antMatcher("/favicon.ico"),
+                        AntPathRequestMatcher.antMatcher("/**/*.html"),
+                        AntPathRequestMatcher.antMatcher("/**/*.css"),
+                        AntPathRequestMatcher.antMatcher("/**/*.js")
+                )).csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth
+                                .requestMatchers(
+                                        "/v2/api-docs/**",
+                                        "/swagger-ui/**",
+                                        "/swagger-resources/**",
+                                        "/webjars/**",
+                                        "/configuration/**",
+                                        "/",
+                                        "/*.html",
+                                        "/favicon.ico",
+                                        "/**/*.html",
+                                        "/**/*.css",
+                                        "/**/*.js",
+                                        "/docs"
+                                ).permitAll()
+                                .anyRequest().authenticated()
+                )
+                .httpBasic(Customizer.withDefaults());
 
 		return http.build();
 	}
