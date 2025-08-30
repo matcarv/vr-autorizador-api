@@ -1,3 +1,0 @@
-name: "Default CodeQL config"
-paths:
-  - src/
