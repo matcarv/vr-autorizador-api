@@ -25,14 +25,11 @@ jobs:
       run: mvn clean verify
 
     - name: Analyze with SonarCloud
-      uses: SonarSource/sonarcloud-github-action@4006f663ecaf1f8093e8e4abb9227f6041f52216
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      with:
-        args: >
-          -Dsonar.projectKey=matcarv_vr-autorizador-api
-          -Dsonar.organization=matcarv
-          -Dsonar.java.binaries=target/classes
-          -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
-        projectBaseDir: .
+      run: |
+        mvn sonar:sonar \
+            -Dsonar.projectKey=matcarv_vr-autorizador-api \
+            -Dsonar.organization=matcarv \
+            -Dsonar.java.binaries=target/classes \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+            -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
 
