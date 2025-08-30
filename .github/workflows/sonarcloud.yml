@@ -62,5 +62,6 @@ jobs:
           args:
             -Dsonar.projectKey=matcarv_vr-autorizador-api
             -Dsonar.organization=matcarv
+            -Dsonar.java.binaries=target/classes
             -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
           projectBaseDir: .
