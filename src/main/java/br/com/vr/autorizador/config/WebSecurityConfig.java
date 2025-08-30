@@ -49,7 +49,22 @@ public class WebSecurityConfig {
 	@Bean
     protected SecurityFilterChain filterChain(final HttpSecurity http) throws Exception {
 		 http
-         .csrf(CsrfConfigurer::disable)
+         .csrf(csrf -> csrf
+             .ignoringRequestMatchers(
+                 "/", 
+                 "/docs",
+                 "/v2/api-docs/**",        // swagger
+                 "/webjars/**",            // swagger-ui webjars
+                 "/swagger-resources/**",  // swagger-ui resources
+                 "/configuration/**",      // swagger configuration
+                 "/swagger-ui/**",
+                 "/*.html",
+                 "/favicon.ico",
+                 "/**/*.html",
+                 "/**/*.css",
+                 "/**/*.js"
+             )
+         )
          .authorizeHttpRequests((authorize) -> authorize
              .requestMatchers(
                      "/",
