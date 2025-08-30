@@ -33,10 +33,10 @@ jobs:
     - name: Build and test with Maven (gera relatório Jacoco)
       run: mvn clean verify
 
-    - name: Initialize CodeQL
+    - name: Analyze with CodeQL
       uses: github/codeql-action/init@v3
       with:
-        languages: java
+        languages: ${{ matrix.language }}
         config-file: .github/codeql/codeql-config.yml
 
     - name: Perform CodeQL Analysis
