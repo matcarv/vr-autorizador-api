@@ -5,13 +5,13 @@
 [![SonarCloud](https://img.shields.io/badge/SonarCloud-Passed-brightgreen)](https://sonarcloud.io/summary/new_code?id=matcarv_vr-autorizador-api)
 
 <!-- Shields das tecnologias usadas -->
-[![Java](https://img.shields.io/badge/Java-ED8B00?logo=java&logoColor=white)](https://www.java.com/)
-[![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
-[![Maven](https://img.shields.io/badge/Maven-C71A36?logo=apachemaven&logoColor=white)](https://maven.apache.org/)
-[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
-[![Swagger](https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=white)](https://swagger.io/)
-[![SonarCloud](https://img.shields.io/badge/SonarCloud-F3702A?logo=sonarcloud&logoColor=white)](https://sonarcloud.io/)
-[![Jacoco](https://img.shields.io/badge/Jacoco-25A162?logo=jacoco&logoColor=white)](https://www.jacoco.org/)
+[![Java](https://img.shields.io/badge/JAVA-ED8B00?logo=java&logoColor=white)](https://www.java.com/)
+[![Spring Boot](https://img.shields.io/badge/BOOT-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Maven](https://img.shields.io/badge/MAVEN-C71A36?logo=apachemaven&logoColor=white)](https://maven.apache.org/)
+[![Docker](https://img.shields.io/badge/DOCKER-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Swagger](https://img.shields.io/badge/SWAGGER-85EA2D?logo=swagger&logoColor=white)](https://swagger.io/)
+[![SonarCloud](https://img.shields.io/badge/SONAR-F3702A?logo=sonarcloud&logoColor=white)](https://sonarcloud.io/)
+[![Jacoco](https://img.shields.io/badge/JACOCO-25A162?logo=jacoco&logoColor=white)](https://www.jacoco.org/)
 
 API de autorização de cartões VR Benefícios.
 
