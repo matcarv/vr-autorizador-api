@@ -1,39 +1,60 @@
 # vr-autorizador-api
+VR Autorizador API - Uma Solução VR Benefícios
 
-[![Build](https://img.shields.io/github/actions/workflow/status/matcarv/vr-autorizador-api/main.yml?branch=main)](https://github.com/matcarv/vr-autorizador-api/actions)
-[![Coverage](https://img.shields.io/badge/Coverage-93%25-brightgreen)](target/site/jacoco/jacoco.html)
-[![SonarCloud](https://img.shields.io/badge/SonarCloud-Passed-brightgreen)](https://sonarcloud.io/summary/new_code?id=matcarv_vr-autorizador-api)
+Projeto construído como participação de um processo seletivo como Consultor Backend.
 
-<!-- Shields das tecnologias usadas -->
-[![Java](https://img.shields.io/badge/JAVA-ED8B00?logo=java&logoColor=white)](https://www.java.com/)
-[![Spring Boot](https://img.shields.io/badge/BOOT-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
-[![Maven](https://img.shields.io/badge/MAVEN-C71A36?logo=apachemaven&logoColor=white)](https://maven.apache.org/)
-[![Docker](https://img.shields.io/badge/DOCKER-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
-[![Swagger](https://img.shields.io/badge/SWAGGER-85EA2D?logo=swagger&logoColor=white)](https://swagger.io/)
-[![SonarCloud](https://img.shields.io/badge/SONAR-F3702A?logo=sonarcloud&logoColor=white)](https://sonarcloud.io/)
-[![Jacoco](https://img.shields.io/badge/JACOCO-25A162?logo=jacoco&logoColor=white)](https://www.jacoco.org/)
+### Ferramentas e Frameworks Utilizados
+<img loading="lazy" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40"/>&nbsp;&nbsp;
+<img loading="lazy" title="Java" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" height="40"/>&nbsp;&nbsp;
+<img loading="lazy" title="Spring" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="40" height="40"/>&nbsp;&nbsp;
+<img loading="lazy" title="Maven" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" width="40" height="40"/>&nbsp;&nbsp;
+<img loading="lazy" title="Junit" src="https://icon.icepanel.io/Technology/svg/JUnit.svg" width="40" height="40"/>&nbsp;&nbsp;
+<img loading="lazy" title="Open API" src="https://icon.icepanel.io/Technology/png-shadow-512/OpenAPI.png" width="40" height="40"/>&nbsp;&nbsp;
+<img loading="lazy" title="MySQL" src="https://icon.icepanel.io/Technology/svg/MySQL.svg" width="40" height="40"/>&nbsp;&nbsp;
+<img loading="lazy" title="Docker" src="https://icon.icepanel.io/Technology/svg/Docker.svg" width="40" height="40"/>&nbsp;&nbsp;
 
-API de autorização de cartões VR Benefícios.
+### Build e Testes Unitários
 
-## Build & Testes
+Para gerar a build do projeto e executar os testes unintários, execute os seguintes comandos:
 
-```bash
+```
 mvn clean package
 mvn clean test
 ```
 
-## Execução
+### Cobertura de Código
 
-```bash
+A cobertura de Código foi fechada com **93%**, conforme imagem abaixo:
+
+![Jacoco Maven Plugin](jacoco.png?raw=true "Jacoco Maven Plugin")
+**target/site/jacoco/jacoco.html**
+
+### Executando a Aplicação
+
+Acesse a raiz do projeto e rode o seguintes comandos:
+````
 docker compose build
 docker compose up -d
-```
+````
+### Chamando os serviços
 
-## Documentação
+**1 - Via Insomnia**
 
-- Swagger: [http://yourhost:8080/autorizador/v1/swagger-ui.html](http://yourhost:8080/autorizador/v1/swagger-ui.html)  
-  Usuário: `admin` | Senha: `vr@123`
+Na raiz do projeto consta um arquivo denominado **insomnia.json**, contendo a coleção das chamadas dos endpoints.
+Baixe e instale o insomnia em sua máquina e realize a importação deste arquivo.
 
-## SonarCloud
+**2 - Via OpenAPI**
 
-Dashboard: https://sonarcloud.io/project/overview?id=matcarv_vr-autorizador-api
+Após a execução do projeto, acesse o link **http://yourhost:8080/autorizador/v1/swagger-ui.html**
+Será solicitado as credenciais de acesso (HTTP Basic), sendo estas:
+ * Username: admin
+ * Password: vr@123**
+
+**OBS:** Troque o termo <i>yourhost</i> da URL pelo IP/hostame da máquina que está rodando a aplicação. 
+
+**Dados do Sonar**
+
+[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-highlight.svg)](https://sonarcloud.io/summary/new_code?id=vr-autorizador-api)
+
+Veja o dashboard completo do SonarCloud:  
+https://sonarcloud.io/project/overview?id=vr-autorizador-api
